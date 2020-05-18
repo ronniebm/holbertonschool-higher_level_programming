@@ -2,13 +2,13 @@
 
 """
 safe_print_list: prints x elements of a list.
-
 @my_list: a list holding any type.
 @x: number of elements to print.
 return: number of elements printed.
 """
-def safe_print_list(my_list=[], x=0):
 
+
+def safe_print_list(my_list=[], x=0):
     counter = 0
 
     for i in range(0, x):
