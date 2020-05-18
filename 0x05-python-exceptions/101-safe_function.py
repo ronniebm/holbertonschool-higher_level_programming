@@ -9,7 +9,6 @@ return: True if integer, else False and prints stderr msg.
 """
 
 
-#!/usr/bin/python3
 def safe_function(fct, *args):
     from sys import stderr
 
