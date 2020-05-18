@@ -3,8 +3,9 @@
 """
 safe_print_list_integers: prints first x elements of a list & only integers.
 
-@value: a value of any type (string, integer).
-return: True if integer, else False.
+@my_list: a list containing only integers.
+@x: number of integers to be printed from the list.
+return: number of integers printed.
 """
 
 
