@@ -1,4 +1,4 @@
-|![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;May 14th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x05. Python - Exceptions >*|
+|![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;May 18th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x05. Python - Exceptions >*|
 |--|--|
 <br>
 **1. Resources**
