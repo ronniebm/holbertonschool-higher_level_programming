@@ -11,10 +11,10 @@ return: True if integer, else False and prints stderr msg.
 
 #!/usr/bin/python3
 def safe_function(fct, *args):
-    import sys
+    from sys import stderr
 
     try:
         return (fct(*args))
     except Exception as error:
-        print("Exception: {}".format(error), file=sys.stderr)
+        print("Exception: {}\n".format(error), file=stderr)
         return None
