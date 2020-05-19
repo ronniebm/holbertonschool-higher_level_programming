@@ -1,0 +1,19 @@
+|![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;May 18th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x06. Python - Classes and Objects >*|
+|--|--|  
+# 1. Resources**  
+- **a.** Resource:  [< See this Website >](http://montyscoconut.github.io/about.html)<br>
+- **b.** Resource: [a Programming/Scripting Language.pdf (PDF)](http://www.informatik.uni-bremen.de/~hof/Monty/Monty-Watt.pdf)<br>
+- **c.** Resource:   [< See this Website >](http://montyscoconut.github.io/try/?page=index)<br>
+- **d.** Resource:  [< See this Youtube VIDEO >](https://www.youtube.com/watch?v=I1f45REi3k4)  
+# 2. General Learning Objectives**
+-   Why Python programming is awesome.
+-   What’s the difference between errors and exceptions
+-   What are exceptions and how to use them
+-   When do we need to use exceptions
+-   How to correctly handle an exception
+-   What’s the purpose of catching exceptions
+-   How to raise a builtin exception
+-   When do we need to implement a clean-up action after an exception  
+===================================  
+Name: RONNIE BARRIOS MORALES  
+Email: ronnie.coding@gmail.com
