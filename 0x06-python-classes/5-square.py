@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+'''class definitions'''
 
 
 class Square:
     '''defining class: Square'''
 
-    # initializing variables
+    # initializing method
     def __init__(self, size=0):
         self.__size = size
 
