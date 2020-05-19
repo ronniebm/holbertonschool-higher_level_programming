@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+'''Defining class Square'''
 
 
-# Defining class Square
 class Square:
 
     # initializing variables
