@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Defining class Square'''
 
 
 class Square:
+    '''defining class: Square'''
 
     # initializing variables
     def __init__(self, size=0):
