@@ -70,6 +70,7 @@ class Square:
 
         if size == 0:
             print()
+            return
 
         for newlines in range(lines):
             print()
