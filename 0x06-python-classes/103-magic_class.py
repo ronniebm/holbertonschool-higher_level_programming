@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+import math
 '''class definitions'''
 
 
 class MagicClass:
     '''defining class: MagicClass'''
-    import math
 
     # initializing method
     def __init__(self, radius):
