@@ -3,14 +3,14 @@
 '''class definitions'''
 
 
-class Magic:
+class MagicClass:
     '''defining class: Square'''
 
     # initializing method
     def __init__(self, radius=0):
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
-        self.radius = None
+        self.__radius = None
 
     # defining area method
     def area(self):
