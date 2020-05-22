@@ -30,15 +30,15 @@ def matrix_divided(matrix, div):
                 'div must be a number'
         ]
 
-        #case0: matrix should not be empty.
+        # case0: matrix should not be empty.
         if not matrix:
                 raise TypeError(msg[0])
 
-        #case1: matrix should be a list type.
+        # case1: matrix should be a list type.
         if not isinstance(matrix, list):
                 raise TypeError(msg[0])
 
-        #case2: 'div' must be int/float type only.
+        # case2: 'div' must be int/float type only.
         if not isinstance(div, int) and not isinstance(div, float):
                 raise TypeError(msg[3])
 
