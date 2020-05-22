@@ -39,6 +39,7 @@ Test cases:
     ValueError: size must be >= 0
 
 
+
     # case1: 'size' is '0', return nothing !.
     -----------------------------------------
     >>> print_square(0)
@@ -60,6 +61,7 @@ Test cases:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
+
 
 
     # case4: 'size' is a negative 'float'.
