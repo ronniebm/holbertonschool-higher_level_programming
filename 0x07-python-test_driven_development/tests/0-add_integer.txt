@@ -1,0 +1,95 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``add_integer``
+
+The "b" arg is "98" by default (pre-setted).
+args must be int/float type only.
+it Returns the sum of the args.
+
+***********************************************************************
+
+First import ``add_integer``
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+***********************************************************************
+
+Test cases:
+
+     # normal behavior.
+     ------------------
+     >>> add_integer(1, 2)
+     3
+
+
+
+     # case0: Negative input.
+     ------------------------
+     >>> add_integer(100, -2)
+     98
+
+
+
+     # case1: Only one given input:
+     ------------------------------
+     >>> add_integer(2)
+     100
+
+
+
+     # case2: Float and negative inputs:
+     ----------------------------------
+     >>> add_integer(100.3, -2)
+     98
+
+
+
+     # case3: Float overflow:
+     -----------------------
+     >>> add_integer(1500.5)
+     1598
+
+
+
+     # case4: argument is a string casted to float:
+     ---------------------------------------------
+     >>> add_integer(float('WoRd'))
+     Traceback (most recent call last):
+     ...
+     ValueError: could not convert string to float: 'WoRd'
+
+
+
+     # case5: input is a string:
+     ---------------------------
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+
+
+    # case6: None input:
+    --------------------
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+
+    # case7: Double negative float input:
+    ------------------------------------
+    >>> add_integer(-100.5, -10.8)
+    -110
+
+
+
+    # case8: Double string input:
+    ----------------------------
+    >>> add_integer("holberton", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
