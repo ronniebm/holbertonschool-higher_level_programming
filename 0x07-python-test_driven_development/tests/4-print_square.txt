@@ -1,0 +1,85 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``print_square``
+
+arg 'size' should be 'int' type only, and greater than '0'.
+
+***********************************************************************
+
+First import ``print_square``
+
+    >>> print_square = __import__('4-print_square').print_square
+
+***********************************************************************
+
+Test cases:
+
+    # normal behavior 1.
+    -------------------
+    >>> print_square(1)
+    #
+
+
+
+    # normal behavior 2.
+    -----------------------------------
+    >>> print_square(2)
+    ##
+    ##
+
+
+
+    #case0: 'size' is a negative 'int'.
+    -------------------------------------
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+
+    # case1: 'size' is '0', return nothing !.
+    -----------------------------------------
+    >>> print_square(0)
+
+
+
+    # case2: 'size' is None.
+    -------------------------------------
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
+
+    # case3: 'size' is a positive 'float'.
+    -------------------------------------
+    >>> print_square(1.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
+    # case4: 'size' is a negative 'float'.
+    -------------------------------------
+    >>> print_square(-1.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
+
+    # case5: 'size' is a True 'bool' type:
+    --------------------------------------
+    >>> print_square(True)
+    #
+
+
+
+    # case6: 'size' is a False 'bool' type:
+    --------------------------------------
+    >>> print_square(False)
+
+
