@@ -60,22 +60,22 @@ def matrix_mul(m_a, m_b):
 
         # case2b: lists inside 'm_a' and 'm_b' should not be empty.
         for row in list(map(lambda row: len(row) == 0, m_a)):
-                if row == True:
+                if row == 1:
                         raise ValueError(msg[4])
 
         for row in list(map(lambda row: len(row) == 0, m_b)):
-                if row == True:
+                if row == 1:
                         raise ValueError(msg[5])
 
         # case3: data in matrices should be int/float type only.
         for row in m_a:
-                for data in row:
-                        if not isinstance(data, int) and not isinstance(data, float):
+                for i in row:
+                        if not isinstance(i, int) and not isinstance(i, float):
                                 raise TypeError(msg[6])
 
         for row in m_b:
-                for data in row:
-                        if not isinstance(data, int) and not isinstance(data, float):
+                for i in row:
+                        if not isinstance(i, int) and not isinstance(i, float):
                                 raise TypeError(msg[7])
 
         # case4: all rows in 'm_a' or in 'm_b' must be same size.
@@ -92,8 +92,8 @@ def matrix_mul(m_a, m_b):
                 raise TypeError(msg[9])
 
         # case5: matrix can't be multiplied
-        if (len(m_a[0]) != len(m_b)) :
-               raise ValueError(msg[10])
+        if (len(m_a[0]) != len(m_b)):
+                raise ValueError(msg[10])
 
         # matrices multiplication procedure:
         new_matrix = []
