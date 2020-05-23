@@ -26,10 +26,13 @@ def add_integer(a, b=98):
                 'b must be an integer'
         ]
 
+        # case0: 'a' is not int and is not float.
         if type(a) is not int and type(a) is not float:
                 raise TypeError(msg[0])
 
+        # case1: 'b' is not int and is not float.
         elif type(b) is not int and type(b) is not float:
                 raise TypeError(msg[1])
 
+        # converting to int and returning sum of 'a' and 'b'
         return (int(a) + int(b))
