@@ -26,9 +26,16 @@ def text_indentation(text):
         if not isinstance(text, str):
             raise TypeError(msg)
 
-        # adding two lines '\n\n' after a separator
-        for separator in ['. ', ': ', '? ']:
-            text = text.replace(separator, '{}\n\n'.format(separator[0]))
+        # adding two lines '\n\n' after a separator.
+        for separator in ['.', ':', '?']:
+            text = text.replace(separator, '{}\n\n'.format(separator))
 
-        # removing 'newline' for the last line
+        # replacing patterns '\n_'.
+        while text.find('\n ') != -1:
+            text = text.replace('\n ', '\n')
+
+        # removing leading whitespaces.
+        text = text.lstrip()
+
+        # printing text indented.
         print(text, end='')
