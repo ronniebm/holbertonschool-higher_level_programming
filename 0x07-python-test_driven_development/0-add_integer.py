@@ -27,8 +27,7 @@ def add_integer(a, b=98):
         ]
 
         # case0: 'a' is not int and is not float.
-        if type(a) is not int and type(a) is not flo
-        at:
+        if type(a) is not int and type(a) is not float:
                 raise TypeError(msg[0])
 
         # case1: 'b' is not int and is not float.
