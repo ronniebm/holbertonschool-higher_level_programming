@@ -1,0 +1,71 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``matrix_mul``
+
+arg 'm_a' should be a matrix (list of lists), should be int/float type.
+arg 'm_b' should be a matrix (list of lists), should be int/float type.
+
+***********************************************************************
+
+First import ``matrix_mul``
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+***********************************************************************
+
+Test cases:
+
+    # normal behavior 1.
+    -------------------
+    >>> matrix_mul([[5, 3, -4, -2], [8, -1, 0, -3]],[[1, 4, 0], [-5, 3, 7], [0, -9, 5], [5, 1, 4]])
+    [[-20, 63, -7], [-2, 26, -19]]
+
+
+    # normal behavior 2.
+    -----------------------------------
+    >>> 
+
+
+
+    #case0: 'size' is a negative 'int'.
+    -------------------------------------
+    >>> 
+
+
+    # case1: 'size' is '0', return nothing !.
+    -----------------------------------------
+    >>> 
+
+
+
+    # case2: 'size' is None.
+    -------------------------------------
+    >>> 
+
+
+
+    # case3: 'size' is a positive 'float'.
+    -------------------------------------
+    >>> 
+
+
+
+    # case4: 'size' is a negative 'float'.
+    -------------------------------------
+    >>> 
+
+
+
+    # case5: 'size' is a True 'bool' type:
+    --------------------------------------
+    >>> 
+
+
+
+    # case6: 'size' is a False 'bool' type:
+    --------------------------------------
+    >>> 
+
+
