@@ -64,32 +64,41 @@ Test cases:
 
      # case5: input is a string:
      ---------------------------
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
+     >>> add_integer(4, "School")
+     Traceback (most recent call last):
+     ...
+     TypeError: b must be an integer
 
 
 
-    # case6: None input:
-    --------------------
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+     # case6: None input:
+     --------------------
+     >>> add_integer(None)
+     Traceback (most recent call last):
+     ...
+     TypeError: a must be an integer
 
 
 
-    # case7: Double negative float input:
-    ------------------------------------
-    >>> add_integer(-100.5, -10.8)
-    -110
+     # case7: Double negative float input:
+     ------------------------------------
+     >>> add_integer(-100.5, -10.8)
+     -110
 
 
 
-    # case8: Double string input:
-    ----------------------------
-    >>> add_integer("holberton", "school")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+     # case8: Double string input:
+     ----------------------------
+     >>> add_integer("holberton", "school")
+     Traceback (most recent call last):
+     ...
+     TypeError: a must be an integer
+
+
+
+     # case9: input is a float("NaN"):
+     ---------------------------------
+     >>> add_integer(4, float("NaN"))
+     Traceback (most recent call last):
+     ...
+     ValueError: cannot convert float NaN to integer
