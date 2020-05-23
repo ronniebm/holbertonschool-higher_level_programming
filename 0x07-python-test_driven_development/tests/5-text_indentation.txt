@@ -70,7 +70,11 @@ Test cases:
     # case5: 'text' ends WITH 3 repeated separators + space.
     -------------------------------------------------------
     >>> text_indentation('why??? ')
-    why???
+    why?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
     <BLANKLINE>
 
 
@@ -86,6 +90,33 @@ Test cases:
     ------------------------------------------------
     >>> text_indentation(str(12345) + ': ')
     12345:
+    <BLANKLINE>
+
+
+
+    # case8: 'text' is a strange text: 
+    ------------------------------------------------
+    >>> text_indentation("hello:  " + ".w.or?l:d" + str (34))
+    hello:
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    w.
+    <BLANKLINE>
+    or?
+    <BLANKLINE>
+    l:
+    <BLANKLINE>
+    d34
+
+
+
+    # case9: 'text' is a strange text with leading whitespaces: 
+    -----------------------------------------------------------
+    >>> text_indentation('      hola.       Hola ?   ')
+    hola.
+    <BLANKLINE>
+    Hola ?
     <BLANKLINE>
 
 
