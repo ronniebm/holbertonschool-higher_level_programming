@@ -27,20 +27,12 @@ def add_integer(a, b=98):
         ]
 
         # case0: 'a' is not int and is not float.
-        if type(a) is not int and type(a) is not float:
+        if a is None or (type(a) is not int and type(a) is not float):
                 raise TypeError(msg[0])
 
         # case1: 'b' is not int and is not float.
         elif type(b) is not int and type(b) is not float:
                 raise TypeError(msg[1])
 
-        # converting 'float' to 'int' for 'a'.
-        if isinstance(a, float):
-                a = int(a)
-
-        # converting 'float' to 'int' for 'b'.
-        if isinstance(b, float):
-                b = int(b)
-
         # returning sum of 'a' and 'b'
-        return (a + b)
+        return (int(a) + int(b))
