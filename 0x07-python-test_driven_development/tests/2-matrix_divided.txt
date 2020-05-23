@@ -60,8 +60,8 @@ Test cases:
 
 
 
-    # case4: lengh of all rows must be > 0
-    --------------------------------------
+    # case4: lengh of all rows are empty:
+    -------------------------------------
     >>> print(matrix_divided([[],[]], 3))
     Traceback (most recent call last):
     ...
@@ -93,5 +93,19 @@ Test cases:
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
+
+
+
+    # case8: matrix divided by a float("inf").
+    ------------------------
+    >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], float("inf")))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+
+    # case9: 'div' is float("NaN"):
+    ---------------------------------------------------
+    >>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], float("NaN")))
+    [[nan, nan, nan], [nan, nan, nan]]
 
 
