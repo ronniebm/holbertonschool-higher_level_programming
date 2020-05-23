@@ -1,0 +1,91 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``text_indentation``
+
+arg 'text' should be 'str' type only
+
+***********************************************************************
+
+First import ``text_indentation``
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+***********************************************************************
+
+Test cases:
+
+    # normal behavior 1.
+    -------------------
+    >>> text_indentation('Lorem ipsum dolor sit amet, consectetur adipiscing elit: ')
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+    <BLANKLINE>
+
+
+
+    # case0: 'text' ends WITHOUT a separator.
+    -----------------------------------------
+    >>> text_indentation('Lorem ipsum dolor sit amet, consectetur adipiscing elit')
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+
+
+    #case1: No input:
+    -----------------
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+
+    # case2: input is an 'int' type:
+    -----------------------------
+    >>> text_indentation(12345)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+
+    # case3: input is a negative 'float' type:
+    ------------------------------------------
+    >>> text_indentation(-1000.28)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+
+    # case4: input is a True 'bool' type:
+    -------------------------------------
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+
+    # case5: 'text' ends WITH 3 repeated separators + space.
+    -------------------------------------------------------
+    >>> text_indentation('why??? ')
+    why???
+    <BLANKLINE>
+
+
+
+    # case6: 'text' is a 'int' casted to str: 
+    -----------------------------------------
+    >>> text_indentation(str(12345))
+    12345
+
+
+
+    # case7: 'text' is a 'int' casted to str + ': ': 
+    ------------------------------------------------
+    >>> text_indentation(str(12345) + ': ')
+    12345:
+    <BLANKLINE>
+
+
