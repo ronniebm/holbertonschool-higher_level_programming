@@ -86,3 +86,19 @@ Test cases:
     ValueError: setting an array element with a sequence.
 
 
+
+    # case7: 'm_b' must be a list:
+    -------------------------------------------
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], 'Holberton')
+    Traceback (most recent call last): 
+    ...
+    ValueError: Scalar operands are not allowed, use '*' instead
+
+
+
+    # case8: 'm_a' can't be empty:
+    -------------------------------------------
+    >>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
