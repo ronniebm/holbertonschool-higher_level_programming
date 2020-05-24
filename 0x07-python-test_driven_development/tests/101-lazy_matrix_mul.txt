@@ -1,0 +1,88 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``lazy_matrix_mul``
+
+arg 'm_a' should be a matrix (list of lists), should be int/float type.
+arg 'm_b' should be a matrix (list of lists), should be int/float type.
+
+***********************************************************************
+
+First import ``lazy_matrix_mul``
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+***********************************************************************
+
+Test cases:
+
+    # normal behavior/regular case:
+    -------------------------------
+    >>> lazy_matrix_mul([[5, 3, -4, -2], [8, -1, 0, -3]],[[1, 4, 0], [-5, 3, 7], [0, -9, 5], [5, 1, 4]])
+    array([[-20,  63,  -7],
+           [ -2,  26, -19]])
+
+
+
+    #case0: argument is a string:
+    -----------------------------
+    >>> lazy_matrix_mul('text')
+    Traceback (most recent call last):    
+    ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+
+    # case1: rows in m_a doesn't have same size:
+    --------------------------------------------
+    >> lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+
+
+    # case2: rows in m_b doesn't have same size
+    ----------------------------------------------
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    ValueError: setting an array element with a sequence.
+
+
+
+    # case3: all elements in matrix 'm_a' should be int/float type:
+    ---------------------------------------------------------------
+    >>> lazy_matrix_mul([[1, 2], ['z', 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    TypeError: invalid data type for einsum
+
+
+
+    # case4: all elements in matrix 'm_b' should be int/float type:
+    ---------------------------------------------------------------
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [['H', 2], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    TypeError: invalid data type for einsum
+
+
+
+    # case5: lists in 'm_a' shouldn't be empty:
+    -------------------------------------------
+    >>> lazy_matrix_mul([[], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last): 
+    ...
+    ValueError: setting an array element with a sequence.
+
+
+
+    # case6: lists in 'm_b' shouldn't be empty:
+    -------------------------------------------
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], []])
+    Traceback (most recent call last): 
+    ...
+    ValueError: setting an array element with a sequence.
+
+
