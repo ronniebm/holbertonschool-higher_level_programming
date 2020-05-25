@@ -3,7 +3,20 @@
 
 
 class Rectangle:
-    """an empty class Rectangle"""
+    """
+     class Rectangle.
+
+     Arguments:
+     ----------
+        width  {int} -- [Rectangle's width]
+        height {int} -- [Rectangle's height]
+
+     Raises:
+     -------
+        TypeError:  [width != int, height != int]
+        ValueError: [width < 0,    height < 0]
+
+    """
 
     def __init__(self, width=0, height=0):
         self.width = width
