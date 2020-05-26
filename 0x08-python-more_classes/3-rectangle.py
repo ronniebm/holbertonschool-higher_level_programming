@@ -22,11 +22,6 @@ class Rectangle:
         perimeter(self) -- [returns a Rectangle's perimeter]
 
     """
-# !/usr/bin/python3
-"""
-This is a class for a Rectangle
-"""
-
 
 class Rectangle:
     def __init__(self, width=0, height=0):
@@ -63,7 +58,7 @@ class Rectangle:
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
-        return self.__width * 2 + self.__height * 2
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         s = ''
