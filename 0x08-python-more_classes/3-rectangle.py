@@ -34,9 +34,14 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        string = "{}".format('\n'.join(["#" * self.__width for row in \
-                                        range(0, self.__height)]))
-        return string
+        s = ''
+        if self.height is 0 or self.width is 0:
+            return ('')
+        w = "#" * self.width
+        for i in range(self.height - 1):
+            s += w + "\n"
+        s += w
+        return str(s)
 
     @property
     def width(self):
