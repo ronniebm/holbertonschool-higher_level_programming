@@ -34,13 +34,9 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        string = "{}".format('\n'.join(["#" * self.__width for row in
+        string = "{}".format('\n'.join(["#" * self.__width for row in \
                                         range(0, self.__height)]))
         return string
-
-    def __repr__(self):
-        return ("Rectangle(" + str(self.__width) + ", " +
-                str(self.__height) + ")")
 
     @property
     def width(self):
