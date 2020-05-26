@@ -22,7 +22,7 @@ class Rectangle:
         perimeter(self) -- [returns a Rectangle's perimeter]
 
     """
-#!/usr/bin/python3
+# !/usr/bin/python3
 """
 This is a class for a Rectangle
 """
@@ -35,7 +35,7 @@ class Rectangle:
 
     def __str__(self):
         string = "{}".format('\n'.join(["#" * self.__width for row in
-                 range(0, self.__height)]))
+                                        range(0, self.__height)]))
         return string
 
     def __repr__(self):
