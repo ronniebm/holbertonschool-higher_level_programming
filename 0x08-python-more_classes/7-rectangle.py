@@ -33,7 +33,7 @@ class Rectangle:
 
     def __str__(self):
         string = "{}".format('\n'.join([str(self.print_symbol) * self.__width
-                 for row in range(0, self.__height)]))
+                                        for row in range(0, self.__height)]))
         return string
 
     def __repr__(self):
