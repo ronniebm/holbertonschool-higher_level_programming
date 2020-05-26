@@ -33,16 +33,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __str__(self):
-        s = ''
-        if self.height is 0 or self.width is 0:
-            return ('')
-        w = "#" * self.width
-        for i in range(self.height - 1):
-            s += w + "\n"
-        s += w
-        return str(s)
-
     @property
     def width(self):
         return self.__width
@@ -74,3 +64,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return self.__width * 2 + self.__height * 2
+
+    def __str__(self):
+        s = ''
+        if self.height is 0 or self.width is 0:
+            return ''
+        w = "#" * self.width
+        for i in range(self.height - 1):
+            s += w + "\n"
+        s += w
+        return str(s)
