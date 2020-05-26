@@ -3,10 +3,7 @@
 
 ### **1. Resources**  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a.** Resource:  [< See this Website >](http://montyscoconut.github.io/about.html)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**b.** Resource: [a Programming/Scripting Language.pdf (PDF)](http://www.informatik.uni-bremen.de/~hof/Monty/Monty-Watt.pdf)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**c.** Resource:   [< See this Website >](http://montyscoconut.github.io/try/?page=index)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**d.** Resource:  [< See this Youtube VIDEO >](https://www.youtube.com/watch?v=I1f45REi3k4)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a.** Resource:  [< See this Youtube VIDEO (from SPAIN) >](https://www.youtube.com/watch?v=ML2L8SvZ9RU)  
 
 ### **2. General Learning Objectives**  
 - Why Python programming is awesome  
