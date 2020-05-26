@@ -3,7 +3,8 @@
 
 ### **1. Resources**  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a.** Resource:  [< See this Youtube VIDEO (from SPAIN) >](https://www.youtube.com/watch?v=ML2L8SvZ9RU)  
+### **a.** Resource:  [< See this Youtube VIDEO (from SPAIN) >](https://www.youtube.com/watch?v=ML2L8SvZ9RU)  
+### **b.** Resource:  [< prohibition/forbid to assing new instance attributes (see URL) >] (https://book.pythontips.com/en/latest/__slots__magic.html)  
 
 ### **2. General Learning Objectives**  
 - Why Python programming is awesome  
