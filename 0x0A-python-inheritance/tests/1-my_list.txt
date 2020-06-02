@@ -1,0 +1,36 @@
+---------------------------------
+User:   Ronnie Barrios
+Email:  ronnie.coding@gmail.com
+---------------------------------
+Using ``my_list``
+
+a class MyList that inherits from list:
+***********************************************************************
+
+First import ``my_list``
+
+    >>> MyList = __import__('1-my_list').MyList
+
+***********************************************************************
+
+Test cases:
+
+     # normal behavior.
+     ------------------
+     >>> my_list = MyList()
+
+
+     # case0: Appending an 'int'.
+     ----------------------------
+     >>> my_list.append(4)
+
+
+     # case0: Appending an 2nd 'int'.
+     ----------------------------
+     >>> my_list.append(1)
+
+
+     # case1: print sorted method.
+     ----------------------------
+     >>> my_list.print_sorted()
+     [1, 4]
