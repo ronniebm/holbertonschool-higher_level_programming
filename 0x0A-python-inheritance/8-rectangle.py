@@ -8,7 +8,7 @@ class Rectangle(BaseGeometry):
     Class Rectangle that inherits
     from class 'BaseGeometry'
 
-    Arguments:
+    Attributes:
     ----------
     width  {int} -- [Rectangle's width]
     height {int} -- [Rectangle's height]
