@@ -9,8 +9,8 @@ class BaseGeometry():
     Raises:
     -------
     Exception: area(self) method not implemented.
-    TypeError:
-    ValueError:
+    TypeError: if value is not 'int' type.
+    ValueError: if value is <= 0.
 
     Methods:
     -------
