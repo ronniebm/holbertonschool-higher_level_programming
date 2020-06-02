@@ -54,6 +54,7 @@ Test cases:
 
 	 # case5: negative numbers.
 	 ----------------------------
+	 >>> my_list = MyList()
 	 >>> my_list.extend([-2, -23, -15, -8])
 	 >>> my_list.print_sorted()
 	 [-23, -15, -8, -2]
