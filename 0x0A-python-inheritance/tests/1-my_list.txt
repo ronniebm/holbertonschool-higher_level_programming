@@ -58,3 +58,23 @@ Test cases:
 	 >>> my_list.print_sorted()
 	 [-23, -15, -8, -2]
 
+
+	 # case6: testing module docstring.
+	 ---------------------------------
+	 >>> m_doc = __import__('1-my_list').__doc__
+	 >>> len(m_doc) > 1
+	 True
+
+
+	 # case7: testing class docstring.
+	 --------------------------------
+	 >>> c_doc = __import__('1-my_list').MyList.__doc__
+	 >>> len(c_doc) > 1
+	 True
+
+
+	 # case8: testing method docstring.
+	 ---------------------------------
+	 >>> m_doc = __import__('1-my_list').MyList.print_sorted.__doc__
+	 >>> len(m_doc) > 1
+	 True
