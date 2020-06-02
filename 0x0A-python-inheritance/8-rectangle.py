@@ -13,15 +13,6 @@ class Rectangle(BaseGeometry):
     width  {int} -- [Rectangle's width]
     height {int} -- [Rectangle's height]
 
-    Raises:
-    -------
-    TypeError:  [width != int, height != int]
-    ValueError: [width < 0,    height < 0]
-
-    Methods:
-    -------
-        area(self) -- [returns a Rectangle's area]
-        perimeter(self) -- [returns a Rectangle's perimeter]
     """
 
     def __init__(self, width, height):
