@@ -18,6 +18,8 @@ Test cases:
      # normal behavior.
      ------------------
      >>> my_list = MyList()
+	 >>> my_list.print_sorted()
+	 []
 
 
      # case0: Appending an 'int'.
@@ -25,12 +27,19 @@ Test cases:
      >>> my_list.append(4)
 
 
-     # case0: Appending an 2nd 'int'.
+     # case1: Appending an 2nd 'int'.
      ----------------------------
      >>> my_list.append(1)
 
 
-     # case1: print sorted method.
+     # case2: print sorted method.
      ----------------------------
      >>> my_list.print_sorted()
      [1, 4]
+
+
+	 # case3: list already sorted.
+	 ----------------------------
+	 >>> my_list.extend([2, 3, 6, 7])
+	 >>> my_list.sort()
+
