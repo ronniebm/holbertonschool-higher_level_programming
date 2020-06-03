@@ -8,8 +8,10 @@ def read_lines(filename="", nb_lines=0):
     and prints it to stdoud.
     """
 
-    with open("./my_file_0.txt", mode='r', encoding='utf8') as fileObj:
-        if nb_lines <= 0:
-            print(fileObj.read(), end="")
-        for i in range(nb_lines):
-                print(fileObj.readline(), end="")
+    counter = 0
+    with open(filename, mode='r', encoding="utf-8") as fileObj:
+        for lines in fileObj:
+            print(lines, end="")
+            counter += 1
+            if counter == nb_lines:
+                break
