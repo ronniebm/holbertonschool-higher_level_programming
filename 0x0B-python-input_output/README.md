@@ -1,4 +1,4 @@
-|![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun 02th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x0B. Python - Input/Output >*|
+|![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png)|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun 03th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x0B. Python - Input/Output >*|
 |--|--|  
 
 ### **1. Resources**  
