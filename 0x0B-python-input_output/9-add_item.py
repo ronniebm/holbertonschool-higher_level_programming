@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""9-add_item.py script"""
+"""
+9-add_item.py script
+a script that adds all arguments
+to a Python list
+"""
 
 from sys import argv
 
