@@ -11,5 +11,5 @@ try:
     items = load_from_json_file('add_item.json')
 except:
     items = []
-
-save_to_json_file(items + sys.argv[1:], 'add_item.json')
+finally:
+    save_to_json_file(items + sys.argv[1:], 'add_item.json')
