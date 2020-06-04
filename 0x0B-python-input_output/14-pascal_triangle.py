@@ -18,14 +18,18 @@ def pascal_triangle(n):
 
     """checking condition"""
     if n <= 0:
-        return []
+        return ([])
 
-    pascal = []
-    row = []
-    for i in range(n):
-        row = [1]
-        if i > 0:
-            for j in range(i):
-                row.append(sum(pascal[-1][j:j+2]))
-        pascal.append(row)
+    pascal = [[1]]
+    last = pascal[0]
+    for row in range(n - 1):
+        new = [1]
+        for col in range(row + 1):
+            if col >= row:
+                new.append(1)
+            else:
+                val = last[col] + last[col + 1]
+                new.append(val)
+        pascal.append(new)
+        last = new
     return (pascal)
