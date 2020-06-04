@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """8-load_from_json_file.py module"""
-
-
 import json
 
 
@@ -18,5 +16,5 @@ def load_from_json_file(filename):
     --------
     object: a JSON object
     """
-    with open(filename, encoding='utf-8') as file:
+    with open(filename, mode='r', encoding='utf-8') as file:
         return json.loads(file.read())
