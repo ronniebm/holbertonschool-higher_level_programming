@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-9-add_item.py script
-"""
+"""9-add_item.py script"""
 
 import sys
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
@@ -11,5 +9,5 @@ try:
     items = load_from_json_file('add_item.json')
 except:
     items = []
-finally:
-    save_to_json_file(items + sys.argv[1:], 'add_item.json')
+
+save_to_json_file(items + sys.argv[1:], 'add_item.json')
