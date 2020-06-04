@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""12-student.py module"""
+"""11-student.py module"""
 
 
 class Student:
@@ -11,7 +11,7 @@ class Student:
     first_name (attrib) -- student's first name.
     last_name (attrib) -- student's last name.
     age (attrib) -- student's age.
-    """
+    "xs""
     def __init__(self, first_name, last_name, age):
         """Instance constructor"""
         self.first_name = first_name
