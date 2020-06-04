@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
 9-add_item.py script
-a script that adds all arguments
-to a Python list
 """
 
-from sys import argv
-
+import sys
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 try:
-    items = load_from_json_file("add_item.json")
+    items = load_from_json_file('add_item.json')
 except:
     items = []
 
-save_to_json_file(items + argv[1:], "add_item.json")
+save_to_json_file(items + sys.argv[1:], 'add_item.json')
