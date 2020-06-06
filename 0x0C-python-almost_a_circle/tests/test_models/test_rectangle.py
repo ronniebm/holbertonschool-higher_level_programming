@@ -53,7 +53,7 @@ class Test_task2(unittest.TestCase):
 class Test_task3(unittest.TestCase):
     """unit testing for task3"""
 
-    def test_b1_getters(self):
+    def test_b0_getters(self):
         """testing getters"""
         r = Rectangle(5, 7, 6, 5, 20)
         self.assertEqual(r.width, 5)
@@ -62,7 +62,7 @@ class Test_task3(unittest.TestCase):
         self.assertEqual(r.y, 5)
         self.assertEqual(r.id, 20)
 
-    def test_b2_setters(self):
+    def test_b1_setters(self):
         """testing setters"""
         r = Rectangle(3, 7, 9, 1, 2)
         r.width = 11
@@ -76,7 +76,7 @@ class Test_task3(unittest.TestCase):
         r.id = 55
         self.assertEqual(r.id, 55)
 
-    def test_b3_width_TypeError(self):
+    def test_b2_TypeError_width(self):
         """width is None"""
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle(None, 2)
@@ -109,7 +109,7 @@ class Test_task3(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle(True, 2)
 
-    def test_b4_height_TypeError(self):
+    def test_b3_TypeError_height(self):
         """height is None"""
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(2, None)
@@ -142,7 +142,7 @@ class Test_task3(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(2, True)
 
-    def test_b5_x_TypeError(self):
+    def test_b4_TypeError_x(self):
         """x is None"""
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(2, 5, None)
@@ -175,7 +175,7 @@ class Test_task3(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(2, 5, True)
 
-    def test_b6_y_TypeError(self):
+    def test_b5_TypeError_y(self):
         """y is None"""
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(2, 5, 1, None)
@@ -208,7 +208,7 @@ class Test_task3(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(2, 5, 1, True)
 
-    def test_b7_width_ValueError(self):
+    def test_b6_ValueError_width(self):
         """width is 0"""
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Rectangle(0, 2)
@@ -217,7 +217,7 @@ class Test_task3(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Rectangle(-32535, 2)
 
-    def test_b8_height_ValueError(self):
+    def test_b7_ValueError_height(self):
         """height is 0"""
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(2, 0)
@@ -225,3 +225,21 @@ class Test_task3(unittest.TestCase):
         """height is negative"""
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(2, -32535)
+
+    def test_b8_ValueError_x(self):
+
+        """x is 0"""
+        self.assertEqual(Rectangle(2, 3, 0, 4).x, 0)
+
+        """x is negative"""
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Rectangle(22, 3, -3, 4)
+
+    def test_b9_ValueError_y(self):
+
+        """y is 0"""
+        self.assertEqual(Rectangle(2, 3, 4, 0).y, 0)
+
+        """y is negative"""
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Rectangle(22, 3, 4, -3)
