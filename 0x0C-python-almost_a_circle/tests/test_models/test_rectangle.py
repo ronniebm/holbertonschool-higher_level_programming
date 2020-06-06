@@ -1,6 +1,7 @@
 """ unit test for class rectangle """
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Test_task2(unittest.TestCase):
@@ -51,13 +52,8 @@ class Test_task2(unittest.TestCase):
         self.assertEqual(r.x, 6)
         self.assertEqual(r.y, 5)
         self.assertEqual(r.id, 20)
-        
-        
 
-""" class Test_Rectangle_width(unittest.TestCase):
-    '''
-    Unittests for Rectangle's width.
-    '''
-    def test_t0(self):
-        b1 = Rectangle(2, 3, 0, 0)
- """
+    def test_a6_is_subclass(self):
+        """ check subclass """
+        r = Rectangle(2, 3, 4, 5)
+        self.assertTrue(issubclass(type(r), Base))
