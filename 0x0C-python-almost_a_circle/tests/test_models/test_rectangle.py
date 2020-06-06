@@ -1,4 +1,6 @@
 """ unit test for class rectangle """
+import io
+import contextlib
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -243,3 +245,31 @@ class Test_task3(unittest.TestCase):
         """y is negative"""
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(22, 3, 4, -3)
+
+
+class Test_task4(unittest.TestCase):
+    """unit testing for task4"""
+
+    def test_c0_area_method(self):
+        """testing area calculations"""
+        self.assertEqual(Rectangle(3, 2).area(), 6)
+        self.assertEqual(Rectangle(5, 3, 0, 0, 30).area(), 15)
+
+
+class Test_task5(unittest.TestCase):
+    """unit testing for task5"""
+
+    def test_display__method(self):
+        """displaying Rectangle 2x3 """
+        r1 = Rectangle(2, 3, 2, 2)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            r1.display()
+        self.assertEqual(f.getvalue(), "##\n##\n##\n")
+
+        """displaying Rectangle 5x4"""
+        r2 = Rectangle(5, 4, 0, 0)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            r2.display()
+        self.assertEqual(f.getvalue(), "#####\n#####\n#####\n#####\n")
