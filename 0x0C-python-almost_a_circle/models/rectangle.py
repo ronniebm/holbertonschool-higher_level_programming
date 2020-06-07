@@ -114,5 +114,5 @@ class Rectangle(Base):
         x = self.__x
         y = self.__y
         _id = self.id
-        return("[Rectangle] (<{0}>) <{1}>/<{2}> - <{3}>/<{4}>".format(
+        return("[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(
             _id, x, y, w, h))
