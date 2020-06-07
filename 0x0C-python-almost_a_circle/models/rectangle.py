@@ -104,7 +104,10 @@ class Rectangle(Base):
         """
         display:
         """
+        for i in range(self.__y):
+            print('')
         for i in range(self.__height):
+            print(' ' * self.__x, end='')
             print('#' * self.__width)
 
     def __str__(self):
@@ -116,3 +119,17 @@ class Rectangle(Base):
         _id = self.id
         return("[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(
             _id, x, y, w, h))
+
+    def update(self, *args):
+        """update method"""
+        ln = len(args)
+        if ln >= 1:
+            self.id = args[0]
+        if ln >= 2:
+            self.__width = args[1]
+        if ln >= 3:
+            self.__height = args[2]
+        if ln >= 4:
+            self.__x = args[3]
+        if ln >= 5:
+            self.__y = args[4]
