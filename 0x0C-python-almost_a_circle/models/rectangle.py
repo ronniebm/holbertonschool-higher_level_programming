@@ -122,27 +122,26 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """update method"""
-        ln = len(args)
-
+        _len = len(args)
         if not args:
             if kwargs.get('id') is not None:
                 self.id = kwargs.get('id')
             if kwargs.get('width') is not None:
-                self.__width = kwargs.get('width')
+                self.width = kwargs.get('width')
             if kwargs.get('height') is not None:
-                self.__height = kwargs.get('height')
+                self.height = kwargs.get('height')
             if kwargs.get('x') is not None:
-                self.__x = kwargs.get('x')
+                self.x = kwargs.get('x')
             if kwargs.get('y') is not None:
-                self.__y = kwargs.get('y')
+                self.y = kwargs.get('y')
         else:
-            if ln >= 1:
+            if _len >= 1 and args[0] is not None:
                 self.id = args[0]
-            if ln >= 2:
-                self.__width = args[1]
-            if ln >= 3:
-                self.__height = args[2]
-            if ln >= 4:
-                self.__x = args[3]
-            if ln >= 5:
-                self.__y = args[4]
+            if _len >= 2 and args[1] is not None:
+                self.width = args[1]
+            if _len >= 3 and args[2] is not None:
+                self.height = args[2]
+            if _len >= 4 and args[3] is not None:
+                self.x = args[3]
+            if _len >= 5 and args[4] is not None:
+                self.y = args[4]
