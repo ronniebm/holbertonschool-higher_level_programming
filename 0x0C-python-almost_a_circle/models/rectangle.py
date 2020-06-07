@@ -38,7 +38,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, val):
         """setter method for width"""
-        if not isinstance(val, int):
+        if type(val) is not int:
             raise TypeError('width must be an integer')
         elif val <= 0:
             raise ValueError('width must be > 0')
@@ -53,7 +53,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, val):
         """setter method for height"""
-        if not isinstance(val, int):
+        if type(val) is not int:
             raise TypeError('height must be an integer')
         elif val <= 0:
             raise ValueError('height must be > 0')
@@ -68,7 +68,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         """setter method for x"""
-        if not isinstance(val, int):
+        if type(val) is not int:
             raise TypeError('x must be an integer')
         elif val < 0:
             raise ValueError('x must be >= 0')
@@ -83,7 +83,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, val):
         """setter method for y"""
-        if not isinstance(val, int):
+        if type(val) is not int:
             raise TypeError('y must be an integer')
         elif val < 0:
             raise ValueError('y must be >= 0')
@@ -99,3 +99,20 @@ class Rectangle(Base):
         val [int] -- area of a rectangle.
         """
         return (self.__width * self.__height)
+
+    def display(self):
+        """
+        display:
+        """
+        for i in range(self.__height):
+            print('#' * self.__width)
+
+    def __str__(self):
+        """overriding the __str__ method"""
+        h = self.__height
+        w = self.__width
+        x = self.__x
+        y = self.__y
+        _id = self.id
+        return("[Rectangle] (<{0}>) <{1}>/<{2}> - <{3}>/<{4}>".format(
+            _id, x, y, w, h))
