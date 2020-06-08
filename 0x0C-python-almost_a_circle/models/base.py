@@ -41,12 +41,12 @@ class Base():
 
         with open(file, mode='w', encoding='utf-8') as myfile:
             if list_objs is None:
-                myfile.write(json.dumps("[]"))
+                myfile.write("[]")
             else:
                 l_dict = []
                 for i in range(len(list_objs)):
                     l_dict.append(list_objs[i].to_dictionary())
-                myfile.write(json.dumps(l_dict))
+                myfile.write(Base.to_json_string(l_dict))
 
     @staticmethod
     def from_json_string(json_string):
@@ -63,3 +63,18 @@ class Base():
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        create method:
+        --------------
+        returns an instance with all attributes already set:
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(8, 9)
+            else:
+                new = cls(5)
+            new.update(**dictionary)
+            return new
