@@ -147,6 +147,7 @@ class Rectangle(Base):
                 self.y = args[4]
 
     def to_dictionary(self):
+        """to_dictionary method"""
         dict1 = {
             'x': self.x,
             'y': self.y,
