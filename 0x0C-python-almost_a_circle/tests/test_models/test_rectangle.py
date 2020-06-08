@@ -17,6 +17,7 @@ class Test_task2(unittest.TestCase):
         self.assertEqual(Rectangle(2, 3, 4, 5, 11).id, 11)
         self.assertEqual(Rectangle(2, 1, 3, 4, 'Holb').id, 'Holb')
         self.assertEqual(Rectangle(2, 1, 2, 4, 'School').id, 'School')
+        self.assertEqual(Rectangle(2, 3, 4, 5).id, 4)
 
         # Instantiation with no args.
         with self.assertRaises(TypeError):
@@ -259,17 +260,208 @@ class Test_task4(unittest.TestCase):
 class Test_task5(unittest.TestCase):
     """unit testing for task5"""
 
-    def test_display__method(self):
-        """displaying Rectangle 2x3 """
-        r1 = Rectangle(2, 3, 2, 2)
+    def test_a0_display__method(self):
+        """display, without 'x' and 'y' """
+        r1 = Rectangle(2, 3)
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             r1.display()
         self.assertEqual(f.getvalue(), "##\n##\n##\n")
 
-        """displaying Rectangle 5x4"""
-        r2 = Rectangle(5, 4, 0, 0)
+        """display, with 'x' and 'y' """
+        r1 = Rectangle(2, 3, 1, 2)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            r1.display()
+        self.assertEqual(f.getvalue(), "\n\n ##\n ##\n ##\n")
+
+        """display, with 'x'>0"""
+        r2 = Rectangle(5, 4, 1)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            r2.display()
+        self.assertEqual(f.getvalue(), " #####\n #####\n #####\n #####\n")
+
+        """display, with 'x'=0"""
+        r2 = Rectangle(5, 4, 0)
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             r2.display()
         self.assertEqual(f.getvalue(), "#####\n#####\n#####\n#####\n")
+
+        """display, with x= 0 and 'y' """
+        r2 = Rectangle(5, 4, 0, 2)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            r2.display()
+        self.assertEqual(f.getvalue(), "\n\n#####\n#####\n#####\n#####\n")
+
+class Test_task6(unittest.TestCase):
+    """unit testing for task6"""
+
+    def test_a0_str1(self):
+        """print __str__ case#1"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (12) 2/1 - 4/6\n")
+
+    def test_a0_str2(self):
+        """printing __str__ case#2"""
+        r1 = Rectangle(5, 5, 1)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (14) 1/0 - 5/5\n")
+
+class Test_task7(unittest.TestCase):
+    """unit testing for task7"""
+
+    def test_a0_str1(self):
+        """print_str_case#1"""
+        r1 = Rectangle(2, 3, 2, 2)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (15) 2/2 - 2/3\n")
+
+class Test_task8(unittest.TestCase):
+    """unit testing for task8"""
+
+    def test_a0_str1(self):
+        """print_str_case#1"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(89)
+        self.assertEqual(r1.id, 89)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 10/10\n")
+
+    def test_a0_str2(self):
+        """print_str_case#2"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(89, 2)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 2/10\n")
+
+    def test_a0_str3(self):
+        """print_str_case#3"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(89, 2, 3)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 2/3\n")
+
+    def test_a0_str4(self):
+        """print_str_case#4"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(89, 2, 3, 4)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 4/10 - 2/3\n")
+
+    def test_a0_str5(self):
+        """print_str_case#5"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r1.y, 5)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 4/5 - 2/3\n")
+
+class Test_task9(unittest.TestCase):
+    """unit testing for task9"""
+
+    def test_a0_str1(self):
+        """print_str_case#1"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(id=89)
+        self.assertEqual(r1.id, 89)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 10/10\n")
+
+    def test_a0_str2(self):
+        """print_str_case#2"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(id=89, width=2)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 2/10\n")
+
+    def test_a0_str3(self):
+        """print_str_case#3"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(id=89, width=2, height=3)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 10/10 - 2/3\n")
+
+    def test_a0_str4(self):
+        """print_str_case#4"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(id=89, width=2, height=3, x=4)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 4/10 - 2/3\n")
+
+    def test_a0_str5(self):
+        """print_str_case#5"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(id=89, width=2, height=3, x=4, y=5)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r1.y, 5)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (89) 4/5 - 2/3\n")
+
+    def test_a0_str6(self):
+        """print_str_case#5"""
+        r1 = Rectangle(10, 10, 10, 10)
+        f = io.StringIO()
+        r1.update(y=89, id=2, x=3, height=4, width=5)
+        self.assertEqual(r1.id, 2)
+        self.assertEqual(r1.width, 5)
+        self.assertEqual(r1.height, 4)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 89)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (2) 3/89 - 5/4\n")
