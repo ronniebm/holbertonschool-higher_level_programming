@@ -145,3 +145,13 @@ class Rectangle(Base):
                 self.x = args[3]
             if _len >= 5 and args[4] is not None:
                 self.y = args[4]
+
+    def to_dictionary(self):
+        dict1 = {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+            }
+        return (dict1)
