@@ -115,7 +115,7 @@ class Test_task18(unittest.TestCase):
         r1 = Rectangle(3, 5, 1)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual(str(r1), "[Rectangle] (7) 1/0 - 3/5")
+        self.assertEqual(str(r1), "[Rectangle] (6) 1/0 - 3/5")
         self.assertEqual(str(r2), "[Rectangle] (7) 1/0 - 3/5")
         self.assertEqual(r1 is r2, False)
         self.assertEqual(r1 == r2, False)
