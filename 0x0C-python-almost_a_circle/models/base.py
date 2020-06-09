@@ -101,7 +101,6 @@ class Base():
             pass
         return newlist
 
-
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
@@ -134,14 +133,17 @@ class Base():
                 read = csv.reader(file)
                 for i in read:
                     if cls.__name__ is "Square":
-                        dict1 = {"id": int(i[0]), "size": int(i[1]),
-                                "x": int(i[2]), "y": int(i[3])}
+                        dict1 = {
+                            "id": int(i[0]), "size": int(i[1]),
+                            "x": int(i[2]), "y": int(i[3])
+                            }
                     elif cls.__name__ is "Rectangle":
-                        dict1 = {"id": int(i[0]), "width": int(i[1]),
-                                "height": int(i[2]), "x": int(i[3]),
-                                "y": int(i[4])}
+                        dict1 = {
+                            "id": int(i[0]), "width": int(i[1]),
+                            "height": int(i[2]), "x": int(i[3]),
+                            "y": int(i[4])
+                            }
                     mylist.append(cls.create(**dict1))
             return mylist
-        except Exception:
-            pass
-        return []
+        except:
+            return []
