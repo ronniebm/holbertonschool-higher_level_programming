@@ -11,13 +11,13 @@ class Test_task2(unittest.TestCase):
 
     def test_a0(self):
         """Testing instances creation"""
-        self.assertEqual(Rectangle(10, 2).id, 1)
-        self.assertEqual(Rectangle(4, 2, 3).id, 2)
-        self.assertEqual(Rectangle(2, 3, 4, 5).id, 3)
+        self.assertEqual(Rectangle(10, 2).id, 4)
+        self.assertEqual(Rectangle(4, 2, 3).id, 5)
+        self.assertEqual(Rectangle(2, 3, 4, 5).id, 6)
         self.assertEqual(Rectangle(2, 3, 4, 5, 11).id, 11)
         self.assertEqual(Rectangle(2, 1, 3, 4, 'Holb').id, 'Holb')
         self.assertEqual(Rectangle(2, 1, 2, 4, 'School').id, 'School')
-        self.assertEqual(Rectangle(2, 3, 4, 5).id, 4)
+        self.assertEqual(Rectangle(2, 3, 4, 5).id, 7)
 
         # Instantiation with no args.
         with self.assertRaises(TypeError):
@@ -313,7 +313,7 @@ class Test_task6(unittest.TestCase):
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             print(r1)
-        self.assertEqual(f.getvalue(), "[Rectangle] (14) 1/0 - 5/5\n")
+        self.assertEqual(f.getvalue(), "[Rectangle] (17) 1/0 - 5/5\n")
 
 class Test_task7(unittest.TestCase):
     """unit testing for task7"""
@@ -324,7 +324,7 @@ class Test_task7(unittest.TestCase):
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             print(r1)
-        self.assertEqual(f.getvalue(), "[Rectangle] (15) 2/2 - 2/3\n")
+        self.assertEqual(f.getvalue(), "[Rectangle] (18) 2/2 - 2/3\n")
 
 class Test_task8(unittest.TestCase):
     """unit testing for task8"""
@@ -465,3 +465,45 @@ class Test_task9(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             print(r1)
         self.assertEqual(f.getvalue(), "[Rectangle] (2) 3/89 - 5/4\n")
+
+"""TO VERIFY !! """
+class Test_task13(unittest.TestCase):
+    """ unittesting class Rectangle task 10. And now, 12. Rectangle update """
+    def test_f0(self):
+        """ testing positional arguments """
+        new_dict = {'x': 14, 'y': 5, 'id': 10, 'width': 22, 'height':25}
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 1)
+        self.assertEqual(r1.y, 9)
+        r1.update(**new_dict)
+        self.assertEqual(r1.width, 22)
+        self.assertEqual(r1.height, 25)
+        self.assertEqual(r1.x, 14)
+        self.assertEqual(r1.y, 5)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        self.assertEqual(f.getvalue(), "[Rectangle] (10) 14/5 - 22/25\n")
+
+    def test_f1(self):
+        """ testing ps """
+        new_dict = {'x': 14, 'y': 5, 'id': 10, 'width': 22, 'height':25}
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(**new_dict)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(r1.to_dictionary())
+        self.assertEqual(
+            f.getvalue(), "{'x': 14, 'y': 5, 'id': 10, 'height': 25, 'width': 22}\n")
+
+    def test_f2(self):
+        """ testing positional arguments """
+        new_dict = {'x': 14, 'y': 5, 'id': 10, 'width': 22, 'height':25}
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(**new_dict)
+        f = io.StringIO()
+        with contextlib.redirect_stdout(f):
+            print(type(r1.to_dictionary()))
+        self.assertEqual(f.getvalue(), "<class 'dict'>\n")
