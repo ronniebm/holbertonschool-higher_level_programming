@@ -492,18 +492,6 @@ class Test_task13(unittest.TestCase):
             print(r1)
         self.assertEqual(f.getvalue(), "[Rectangle] (10) 14/5 - 22/25\n")
 
-    def test_f1_to_dictionary(self):
-        """ printing dictionary """
-        new_dict = {'x': 14, 'y': 5, 'id': 10, 'width': 22, 'height': 25}
-        r1 = Rectangle(10, 2, 1, 9)
-        r1.update(**new_dict)
-        f = io.StringIO()
-        with contextlib.redirect_stdout(f):
-            print(r1.to_dictionary())
-            msg = "{'x': 14, 'y': 5, 'id': 10, 'height': 25, 'width': 22}\n"
-        self.assertEqual(
-            f.getvalue(), msg)
-
     def test_f2_to_dictionary(self):
         """ testing 'dict' class type """
         new_dict = {'x': 14, 'y': 5, 'id': 10, 'width': 22, 'height': 25}

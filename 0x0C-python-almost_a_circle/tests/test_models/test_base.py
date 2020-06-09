@@ -38,18 +38,6 @@ class Test_task1(unittest.TestCase):
 class Test_task15(unittest.TestCase):
     """ unit testing class Base task 15 """
 
-    def test_b1_dict_to_json(self):
-        """ testing positional arguments"""
-        new_dict = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
-        r1 = Rectangle(10, 7, 2, 8)
-        dictionary = r1.to_json_string([new_dict])
-        f = io.StringIO()
-        with contextlib.redirect_stdout(f):
-            print(dictionary)
-        self.assertEqual(
-            f.getvalue(),
-            '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]\n')
-
     def test_b2_dict_to_json(self):
         """ testing positional arguments """
         new_dict = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
