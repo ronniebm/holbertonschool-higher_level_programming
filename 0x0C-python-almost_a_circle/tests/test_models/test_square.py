@@ -85,7 +85,7 @@ class Test_task11(unittest.TestCase):
 class Test_task12(unittest.TestCase):
     """ unittesting class Rectangle task 10. And now, 12. Square update """
 
-    def test_ab1_args(self):
+    def test_b1_args(self):
         """ testing positional arguments """
         r1 = Square(50)
         self.assertEqual(r1.size, 50)
@@ -99,7 +99,7 @@ class Test_task12(unittest.TestCase):
             print(r1)
         self.assertEqual(f.getvalue(), "[Square] (10) 14/5 - 22\n")
 
-    def test_ab2_kwargs(self):
+    def test_b2_kwargs(self):
         """ testing positional arguments """
         r1 = Square(50)
         self.assertEqual(r1.size, 50)
@@ -117,8 +117,8 @@ class Test_task12(unittest.TestCase):
 class Test_task14(unittest.TestCase):
     """ unittesting class Rectangle task 10. And now, 12. Square update """
 
-    def test_ac1_load_dict(self):
-        """ testing positional arguments """
+    def test_c0_to_dictionary(self):
+        """ updating with a dictionary """
         new_dict = {'x': 14, 'y': 5, 'id': 10, 'size': 22}
         r1 = Square(50)
         self.assertEqual(r1.size, 50)
@@ -132,8 +132,8 @@ class Test_task14(unittest.TestCase):
             print(r1)
         self.assertEqual(f.getvalue(), "[Square] (10) 14/5 - 22\n")
 
-    def test_ac2_print_dict(self):
-        """ testing ps """
+    def test_c1_to_dictionary(self):
+        """ printing the dictionary """
         new_dict = {'x': 14, 'y': 5, 'id': 10, 'size': 22}
         r1 = Square(50)
         r1.update(**new_dict)
@@ -143,8 +143,8 @@ class Test_task14(unittest.TestCase):
         self.assertEqual(
             f.getvalue(), "{'id': 10, 'x': 14, 'size': 22, 'y': 5}\n")
 
-    def test_ac3_type_dict(self):
-        """ testing positional arguments """
+    def test_c2_to_dictionary(self):
+        """ printing 'dict' type """
         new_dict = {'x': 14, 'y': 5, 'id': 10, 'size': 22}
         r1 = Square(50)
         r1.update(**new_dict)

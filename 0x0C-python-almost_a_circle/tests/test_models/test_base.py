@@ -38,8 +38,8 @@ class Test_task15(unittest.TestCase):
     """ unit testing class Base task 15 """
     pass
 
-    def test_b01_dict_to_json(self):
-        """ testing positional arguments """
+    def test_b1_dict_to_json(self):
+        """ testing positional arguments"""
         new_dict = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_json_string([new_dict])
@@ -50,7 +50,7 @@ class Test_task15(unittest.TestCase):
             f.getvalue(),
             '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]\n')
 
-    def test_b02_dict_to_json(self):
+    def test_b2_dict_to_json(self):
         """ testing positional arguments """
         new_dict = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
         r1 = Rectangle(10, 7, 2, 8)
@@ -61,9 +61,8 @@ class Test_task15(unittest.TestCase):
         self.assertEqual(
             f.getvalue(), "<class 'str'>\n")
 
-    # revisar
-    def test_b03_json_to_string(self):
-        """This function tests the to_json_string func"""
+    def test_b3_json_to_string(self):
+        """This function tests the to_json_string"""
         r1 = Rectangle(10, 7, 2, 8, 1)
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
@@ -71,8 +70,7 @@ class Test_task15(unittest.TestCase):
             len(json_dictionary),
             len('[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]'))
 
-    # revisar
-    def test_b04_to_json_string_withNonearg(self):
+    def test_b4_to_json_string_withNonearg(self):
         """This function tests to_json_string func with None argument"""
         json_dictionary = Base.to_json_string(None)
         self.assertEqual(json_dictionary, "[]")
@@ -82,7 +80,7 @@ class Test_task15(unittest.TestCase):
 class Test_task16(unittest.TestCase):
     """ unit testing class Base task 16 """
 
-    def test_c01_save_to_filewithNonearg(self):
+    def test_c0_save_to_filewithNonearg(self):
         """This function tests the save_to_file func with None argument"""
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
@@ -93,7 +91,7 @@ class Test_task16(unittest.TestCase):
 class Test_task17(unittest.TestCase):
     """ unit testing class Base task 17 """
 
-    def test_d01_from_json_string(self):
+    def test_d0_from_json_string(self):
         """This function tests the from_json_string func"""
         list_input = [
             {'id': 89, 'width': 10, 'height': 4},
@@ -106,7 +104,7 @@ class Test_task17(unittest.TestCase):
                           {"height": 7, "width": 1, "id": 7}])
         self.assertEqual(type(list_output), list)
 
-    def test_d02_from_json(self):
+    def test_d1_from_json(self):
         """This function tests the from_json_string func"""
         list_input = []
         json_list_input = Rectangle.to_json_string(list_input)
@@ -114,7 +112,7 @@ class Test_task17(unittest.TestCase):
         self.assertEqual(list_output, [])
         self.assertEqual(type(list_output), list)
 
-    def test_d03_from_json_stringwithNonearg(self):
+    def test_d2_from_json_stringwithNonearg(self):
         """This function tests the from_json_string func"""
         list_output = Rectangle.from_json_string(None)
         self.assertEqual(list_output, [])
@@ -124,7 +122,7 @@ class Test_task17(unittest.TestCase):
 class Test_task18(unittest.TestCase):
     """ unit testing class Base task 18 """
 
-    def test_e01_create_zzz(self):
+    def test_d3_create_zzz(self):
         """This function tests the create func"""
         r1 = Rectangle(3, 5, 1)
         r1_dictionary = r1.to_dictionary()
@@ -138,7 +136,7 @@ class Test_task18(unittest.TestCase):
 class Test_task19(unittest.TestCase):
     """ unit testing class Base task 19 """
 
-    def test_f01_loadfromfile(self):
+    def test_d4_loadfromfile(self):
         """This function tests the create func"""
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
