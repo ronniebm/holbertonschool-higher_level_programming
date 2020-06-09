@@ -142,5 +142,6 @@ class Base():
                                 "y": int(i[4])}
                     mylist.append(cls.create(**dict1))
             return mylist
-        except:
-            return []
+        except Exception:
+            pass
+        return []
