@@ -37,7 +37,6 @@ class Test_task1(unittest.TestCase):
 
 class Test_task15(unittest.TestCase):
     """ unit testing class Base task 15 """
-    pass
 
     def test_b1_dict_to_json(self):
         """ testing positional arguments"""
