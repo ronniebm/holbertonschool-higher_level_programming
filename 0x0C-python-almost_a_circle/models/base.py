@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ base.py module """
 import json
+import csv
+from os import path
 
 
 class Base():
@@ -99,3 +101,43 @@ class Base():
         except Exception:
             pass
         return newlist
+
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        writes a object's list string representation
+        into a CVS file
+        """
+        with open(cls.__name__ + ".csv", "w", newline='') as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+
+            elif cls.__name__ == "Square":
+                fieldnames = ['id', 'size', 'x', 'y']
+
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+
+            if list_objs is not None:
+                for model in list_objs:
+                    writer.writerow(model.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        reads from a CVS file an object's list
+        string representation.
+        """
+        if path.exists(cls.__name__ + ".csv") is False:
+            return []
+
+        with open(cls.__name__ + ".csv", "r", newline='') as f:
+            listofinstances = []
+            reader = csv.DictReader(f)
+            for row in reader:
+                for key, value in row.items():
+                    row[key] = int(value)
+                listofinstances.append(cls.create(**row))
+
+        return listofinstances
