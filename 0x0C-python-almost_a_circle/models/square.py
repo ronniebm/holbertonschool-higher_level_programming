@@ -12,23 +12,26 @@ class Square(Rectangle):
     """
 
     def __init__(self, size, x=0, y=0, id=None):
-        self.size = size
+        """
+        This function create instances of an
+        square Class.
+        """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """getter method for width"""
-        return self.__size
+        """
+        return the size (width)
+        """
+        return self.width
 
     @size.setter
-    def size(self, val):
-        """setter method for width"""
-        if type(val) is not int:
-            raise TypeError('width must be an integer')
-        elif val <= 0:
-            raise ValueError('width must be > 0')
-        else:
-            self.__size = val
+    def size(self, value):
+        """
+        set the size (width and height)
+        """
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """overriding the __str__ method"""
