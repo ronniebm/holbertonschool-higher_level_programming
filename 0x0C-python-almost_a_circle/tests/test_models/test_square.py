@@ -1,5 +1,6 @@
 """ unit test for class square """
 import io
+import pep8
 import contextlib
 import unittest
 from models.base import Base
@@ -10,6 +11,36 @@ from models.rectangle import Rectangle
 class Test_task10(unittest.TestCase):
     """unit testing for task10"""
 
+    def test_pep8_model(self):
+        """Tests for pep8"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/square.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
+
+    def test_pep8_test(self):
+        """Tests for pep8"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_square.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
+
+    def test_00_documentation(self):
+        """Test to see if documentation is created and correct"""
+        self.assertTrue(hasattr(Square, "__init__"))
+        self.assertTrue(Square.__init__.__doc__)
+        self.assertTrue(hasattr(Square, "size"))
+        self.assertTrue(Square.size.__doc__)
+        self.assertTrue(hasattr(Square, "x"))
+        self.assertTrue(Square.x.__doc__)
+        self.assertTrue(hasattr(Square, "y"))
+        self.assertTrue(Square.y.__doc__)
+        self.assertTrue(hasattr(Square, "__str__"))
+        self.assertTrue(Square.__str__.__doc__)
+        self.assertTrue(hasattr(Square, "update"))
+        self.assertTrue(Square.update.__doc__)
+        self.assertTrue(hasattr(Square, "to_dictionary"))
+        self.assertTrue(Square.to_dictionary.__doc__)
 
     def test_a0_instantiation(self):
         """Testing instances creation"""
