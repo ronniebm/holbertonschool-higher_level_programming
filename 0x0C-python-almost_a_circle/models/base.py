@@ -87,14 +87,15 @@ class Base():
         a method that returns a list of instances.
         """
 
-        file = cls.__name__ + '.json'
-
-        with open(cls.__name__ + ".json", "r",  encoding='utf-8') as file:
-            listofinstances = []
-            objectlist = cls.from_json_string(file.read())
-            for dict in objectlist:
-                objectdict = {}
-                for key, value in dict.items():
-                    objectdict[key] = value
-                listofinstances.append(cls.create(**objectdict))
-            return listofinstances
+        filename = cls.__name__ + ".json"
+        newlist = []
+        if cls is None:
+            return newlist
+        try:
+            with open(filename, mode="r", encoding='utf-8') as Myfile:
+                newlist = cls.from_json_string(Myfile.read())
+            for item in range(len(newlist)):
+                newlist[item] = cls.create(**newlist[item])
+        except Exception:
+            pass
+        return newlist
