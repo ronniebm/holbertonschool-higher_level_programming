@@ -89,12 +89,12 @@ class Base():
 
         file = cls.__name__ + '.json'
 
-        with open(file, mode='r', encoding='utf-8') as myfile:
-            if myfile is None:
-                return("[]")
-            else:
-                new_list = cls.from_json_string(myfile.read())
-                new_obj = []
-                for obj in new_list:
-                    new_obj.append(cls.create(**obj))
-                return new_obj
+        with open(cls.__name__ + ".json", "r",  encoding='utf-8') as file:
+            listofinstances = []
+            objectlist = cls.from_json_string(file.read())
+            for dict in objectlist:
+                objectdict = {}
+                for key, value in dict.items():
+                    objectdict[key] = value
+                listofinstances.append(cls.create(**objectdict))
+            return listofinstances
