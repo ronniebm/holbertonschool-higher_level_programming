@@ -13,6 +13,7 @@ class Test_task1(unittest.TestCase):
 
     def test_a0_instances_creation(self):
         """no args, obj#1"""
+        Base._Base__nb_objects = 0
         self.assertEqual(Base().id, 1)
         self.assertEqual(Base().id, 2)
         self.assertEqual(Base('Holberton').id, 'Holberton')

@@ -10,8 +10,10 @@ from models.rectangle import Rectangle
 class Test_task10(unittest.TestCase):
     """unit testing for task10"""
 
+
     def test_a0_instantiation(self):
         """Testing instances creation"""
+        Base._Base__nb_objects = 0
         self.assertEqual(Square(10, 2).id, 1)
         self.assertEqual(Square(4, 2, 3).id, 2)
         self.assertEqual(Square(2, 3, 4, 5).id, 5)
@@ -152,3 +154,7 @@ class Test_task14(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             print(type(r1.to_dictionary()))
         self.assertEqual(f.getvalue(), "<class 'dict'>\n")
+
+
+if __name__ == '__main__':
+    unittest.main(failfast=True, exit=False)

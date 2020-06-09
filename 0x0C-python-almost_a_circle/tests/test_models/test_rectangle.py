@@ -10,14 +10,15 @@ class Test_task2(unittest.TestCase):
     """unit testing for task2"""
 
     def test_a0(self):
+        Base._Base__nb_objects = 0
         """Testing instances creation"""
-        self.assertEqual(Rectangle(10, 2).id, 4)
-        self.assertEqual(Rectangle(4, 2, 3).id, 5)
-        self.assertEqual(Rectangle(2, 3, 4, 5).id, 6)
+        self.assertEqual(Rectangle(10, 2).id, 1)
+        self.assertEqual(Rectangle(4, 2, 3).id, 2)
+        self.assertEqual(Rectangle(2, 3, 4, 5).id, 3)
         self.assertEqual(Rectangle(2, 3, 4, 5, 11).id, 11)
         self.assertEqual(Rectangle(2, 1, 3, 4, 'Holb').id, 'Holb')
         self.assertEqual(Rectangle(2, 1, 2, 4, 'School').id, 'School')
-        self.assertEqual(Rectangle(2, 3, 4, 5).id, 7)
+        self.assertEqual(Rectangle(2, 3, 4, 5).id, 4)
 
         # Instantiation with no args.
         with self.assertRaises(TypeError):
@@ -314,7 +315,7 @@ class Test_task6(unittest.TestCase):
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             print(r1)
-        self.assertEqual(f.getvalue(), "[Rectangle] (17) 1/0 - 5/5\n")
+        self.assertEqual(f.getvalue(), "[Rectangle] (14) 1/0 - 5/5\n")
 
 
 class Test_task7(unittest.TestCase):
@@ -326,7 +327,7 @@ class Test_task7(unittest.TestCase):
         f = io.StringIO()
         with contextlib.redirect_stdout(f):
             print(r1)
-        self.assertEqual(f.getvalue(), "[Rectangle] (18) 2/2 - 2/3\n")
+        self.assertEqual(f.getvalue(), "[Rectangle] (15) 2/2 - 2/3\n")
 
 
 class Test_task8(unittest.TestCase):
