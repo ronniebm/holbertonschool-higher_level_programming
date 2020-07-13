@@ -1,4 +1,4 @@
-| ![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun 03th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x0B. Python - Input/Output >* |
+| ![enter image description here](https://1.bp.blogspot.com/-q5IliaSxM0Q/Tp2M2Y1vwKI/AAAAAAAAA4I/RXcz6Hisb9Q/s1600/text-x-python.png) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLBERTON school Project<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun 05th 2020.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*< 0x0C. Python - Almost a circle >* |
 |                                                                                                                                     |                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
@@ -9,18 +9,13 @@
 
 ### **2. General Learning Objectives**  
 - Why Python programming is awesome  
-- How to open a file  
-- How to write text in a file  
-- How to read the full content of a file  
-- How to read a file line by line  
-- How to move the cursor in a file  
-- How to make sure a file is closed after using it  
-- What is and how to use the with statement  
-- What is JSON  
-- What is serialization  
-- What is deserialization  
-- How to convert a Python data structure to a JSON string  
-- How to convert a JSON string to a Python data structure  
-===================================  
+- What is Unit testing and how to implement it in a large project  
+- How to serialize and deserialize a Class  
+- How to write and read a JSON file  
+- What is *args and how to use it  
+- What is **kwargs and how to use it  
+- How to handle named arguments in a function  
+===================================
+
 Name: RONNIE BARRIOS MORALES.  
 Email: ronnie.coding@gmail.com

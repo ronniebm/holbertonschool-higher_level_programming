@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
 """
-safe_print_list_integers: prints first x elements of a list & only integers.
+safe_print_division(a, b): divides 2 integers and prints the result.
 
-@my_list: a list containing only integers.
-@x: number of integers to be printed from the list.
-return: number of integers printed.
+@a: first number.
+@b: second number.
+return: result of operation.
 """
 
 
-def safe_print_list_integers(my_list=[], x=0):
+def safe_print_division(a, b):
     counter = 0
 
     for i in range(0, x):

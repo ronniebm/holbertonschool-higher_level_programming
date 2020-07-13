@@ -4,7 +4,9 @@
 ### **1. Resources**  
 
 ### **a.** Resource:  [< See this Youtube VIDEO >](https://www.youtube.com/watch?v=d8kCdLCi6Lk)  
-### **b.** Resource:  [< Inheritance in Python (see URL) >] (https://hub.packtpub.com/inheritance-python/)  
+### **b.** Resource:  [< Inheritance in Python (see URL) >] (https://hub.packtpub.com/inheritance-python/
+
+)  
 
 ### **2. General Learning Objectives**  
 - Why Python programming is awesome  
