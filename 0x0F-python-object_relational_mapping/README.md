@@ -9,4 +9,4 @@
 - What ORM means.
 - How to map a Python Class to a MySQL table.
 
-![Alt Text](https://upload.wikimedia.org/wikipedia/commons/6/62/MindView_icon.png)
+![Learning Python and MySQL](https://upload.wikimedia.org/wikipedia/commons/6/62/MindView_icon.png)
