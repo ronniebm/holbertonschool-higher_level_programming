@@ -29,9 +29,7 @@ WHERE states.name=%s ORDER BY cities.id ASC"""
     query_rows = cursor.fetchall()
 
     # Printing DATABASE
-    for i in range(len(query_rows)-1):
-        print(str(query_rows[i]).split("'")[1], end=", ")
-    print(str(query_rows[i+1]).split("'")[1])
-
+    print(", ".join([row[0] for row in query_rows]))
+    
     cursor.close()
     db_connection.close()
