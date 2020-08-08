@@ -27,7 +27,7 @@ if __name__ == '__main__':
                    (name,))
     query_rows = cursor.fetchall()
 
-    # Printing DATABAS
+    # Printing DATABASE
     for row in query_rows:
         if row[1] == name:
             print(row)
