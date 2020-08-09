@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # Creating an instance.
     session = Session(engine)
 
-    # reading first State object.
+    # reading all State object.
     all_states = session.query(State).order_by(State.id)
 
     # printing from database.
