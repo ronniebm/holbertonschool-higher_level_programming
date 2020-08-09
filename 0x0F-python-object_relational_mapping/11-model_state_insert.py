@@ -31,4 +31,5 @@ if __name__ == '__main__':
     # printing from database (if found).
     print(search)
 
+    session.commit()
     session.close()
