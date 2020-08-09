@@ -24,9 +24,9 @@ if __name__ == '__main__':
     # adding Louisiana state.
     louisiana = State(name="Louisiana")
     session.add(louisiana)
+    session.commit()
 
     # printing from database (if found).
     print(louisiana.id)
 
-    session.commit()
     session.close()
