@@ -21,13 +21,10 @@ if __name__ == '__main__':
     # create a Session.
     session = Session()
 
-    # selecting all states.
-    all_states = session.query(State)
-
     # deleting all states.
-    for state in all_states:
+    for state in session.query(State):
         if "a" in state.name:
-            all_states.delete(state)
+            session.delete(state)
 
     session.commit()
     session.close()
