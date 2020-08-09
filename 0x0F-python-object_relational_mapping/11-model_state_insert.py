@@ -25,11 +25,8 @@ if __name__ == '__main__':
     louisiana = State(name="Lousiana")
     session.add(louisiana)
 
-    # reading all State object.
-    search = session.query(State).filter_by(name="Louisiana").first().id
-
     # printing from database (if found).
-    print(search)
+    print(louisiana.id)
 
     session.commit()
     session.close()
