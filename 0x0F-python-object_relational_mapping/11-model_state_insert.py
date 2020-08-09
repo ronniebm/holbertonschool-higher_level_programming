@@ -22,7 +22,7 @@ if __name__ == '__main__':
     session = Session()
 
     # adding Louisiana state.
-    louisiana = State(name="Lousiana")
+    louisiana = State(name="Louisiana")
     session.add(louisiana)
 
     # printing from database (if found).
