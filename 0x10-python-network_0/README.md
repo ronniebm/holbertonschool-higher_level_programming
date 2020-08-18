@@ -1,3 +1,5 @@
+&emsp;&emsp;<img src="https://camo.githubusercontent.com/04a8a9a456b8ecafad2eb4f2cff6803cd0194496/687474703a2f2f7777772e686f6c626572746f6e7363686f6f6c2e636f6d2f686f6c626572746f6e2d6c6f676f2e706e67" />  
+
 ### PROJECT: 0x10. Python - Network #0  
 ---
 For this project, we are going to learn about:<br>  
@@ -24,8 +26,6 @@ For this project, we are going to learn about:<br>
 - What an HTTP Cookie is  
 - How to make a request with cURL  
 - What happens when you type google.com in your browser (Application level)  
-
-&emsp;&emsp;<img src="https://camo.githubusercontent.com/04a8a9a456b8ecafad2eb4f2cff6803cd0194496/687474703a2f2f7777772e686f6c626572746f6e7363686f6f6c2e636f6d2f686f6c626572746f6e2d6c6f676f2e706e67" />  
 
 ---
 git_user: ronniebm  |  email: ronnie.coding@gmail.com
