@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # takes in a URL, send a get request, and show response's body.
 
 # [-s]: silent mode   => don't show any error message.

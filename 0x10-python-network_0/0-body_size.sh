@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # shows body size of a given URL.
 
 # [-s]: silent mode   => don't show any error message.
