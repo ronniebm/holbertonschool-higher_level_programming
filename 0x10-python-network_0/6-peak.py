@@ -7,7 +7,6 @@ def find_peak(list_of_integers):
 
     _l = list(list_of_integers)
     size = len(_l)
-    PEAK = 0
 
     if size == 0:
         return None
