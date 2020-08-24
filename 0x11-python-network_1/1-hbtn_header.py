@@ -8,4 +8,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen('{}'.format(my_url)) as response:
         html = response.headers
 
-print(html._headers[11][1])
+    print(html._headers[11][1])
