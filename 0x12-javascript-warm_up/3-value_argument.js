@@ -1,5 +1,5 @@
 #!/usr/bin/node
-if (process.argv.slice(2).length === 0) {
+if (process.argv[2] === undefined) {
   console.log('No argument');
 } else {
   console.log(process.argv.slice(2)[0]);
