@@ -7,5 +7,4 @@ if (process.argv.slice(2).length == 0) {
 }   else {
       console.log(parseInt(process.argv.slice(2)[0]));
 }
-
 }
