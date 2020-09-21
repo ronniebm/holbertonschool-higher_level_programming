@@ -3,7 +3,7 @@
 /**
  * A class Rectangle that defines a rectangle:
  * -------------------------------------------
- * w: with of a Rectangle.
+ * w: width of a Rectangle.
  * h: height of a Rectangle.
  */
 
