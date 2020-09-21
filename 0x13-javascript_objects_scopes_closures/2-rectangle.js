@@ -3,14 +3,16 @@
 /**
  * A class Rectangle that defines a rectangle:
  * -------------------------------------------
- * w: with of a Rectangle.
- * h: height of a Rectangle.
+ * w: with of a rectangle.
+ * h: height of a rectangle.
  */
 
 class Rectangle {
   constructor (w, h) {
-    this.width = w;
-    this.height = h;
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
 }
 
