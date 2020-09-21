@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// inherits from Rectangle.
+// inherits from Rectangle of 4-rectangle.js
 const Rectangle = require('./4-rectangle');
 
 /**
