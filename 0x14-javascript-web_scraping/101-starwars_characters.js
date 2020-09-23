@@ -5,25 +5,17 @@
  */
 
 const request = require('request');
-const args = process.argv.slice(2);
-const url = 'http://swapi.co/api/films/' + args[0];
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
-const options = {
-  url: url,
-  method: 'GET',
-  headers: {
-    Accept: 'application/json',
-    'Accept-Charset': 'utf-8'
-  }
-};
-
-request(options, (err, res, body) => {
-  if (err) { throw err; }
-  const myList = JSON.parse(body).characters;
-  for (let i = 0; i < myList.length; i++) {
-    request({ url: myList[i], method: 'GET' }, (err, res, body) => {
-      if (err) { console.log('Error'); }
-      console.log(JSON.parse(body).name);
-    });
-  }
+request.get({ url: url, json: true }, function (err, res, body) {
+  if (err) console.log(err);
+  print(body.characters, 0);
 });
+
+function print (characterList, index) {
+  request({ url: characterList[index], json: true }, (err, res) => {
+    if (err) console.log(err);
+    console.log(res.body.name);
+    if (index + 1 < characterList.length) { print(characterList, index + 1); }
+  });
+}
