@@ -6,13 +6,7 @@
  */
 
 const request = require('request');
-const argv = process.argv;
-const url = 'http://swapi.co/api/films/';
 
-request(url + argv[2], function (err, res, body) {
-  if (err) {
-    console.log(err);
-  }
-  const json = JSON.parse(body);
-  console.log(json.title);
+request.get('https://swapi-api.hbtn.io/api/films/' + process.argv[2], (err, res, body) => {
+  return err ? console.log(err) : console.log(JSON.parse(body).title);
 });
