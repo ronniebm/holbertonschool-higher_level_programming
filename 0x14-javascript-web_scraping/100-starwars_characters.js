@@ -5,21 +5,14 @@
  */
 
 const request = require('request');
-const movie = process.argv[2];
-const url = 'https://swapi.co/api/films/' + movie;
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
-request(url, function (err, res, body) {
-  if (err) {
-    console.log(err);
-  }
-  const film = JSON.parse(body);
-  for (const character of film.characters) {
-    request(character, function (err, res, body) {
-      if (err) {
-        console.log(err);
-      }
-      const chr = JSON.parse(body);
-      console.log(chr.name);
+request.get({ url: url, json: true }, (err, res, body) => {
+  if (err) console.log(err);
+  body.characters.forEach(element => {
+    request.get({ url: element, json: true }, (err, res) => {
+      if (err) console.log(err);
+      console.log(res.body.name);
     });
-  }
+  });
 });
