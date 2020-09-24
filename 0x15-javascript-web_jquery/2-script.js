@@ -2,6 +2,8 @@
    color of the HTML tag HEADER to red (#FF0000)
    when the user clicks on the tag */
 
+const $ = window.$;
+
 $('div#red_header').click(function () {
   $('header').css('color', '#FF0000');
 });
